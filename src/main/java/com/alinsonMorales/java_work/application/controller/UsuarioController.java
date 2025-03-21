@@ -4,6 +4,7 @@ import com.alinsonMorales.java_work.application.exceptions.ServiceException;
 import com.alinsonMorales.java_work.application.models.dto.UsuarioRequestDTO;
 import com.alinsonMorales.java_work.application.models.dto.UsuarioResponseDTO;
 import com.alinsonMorales.java_work.application.services.IUsuarioService;
+import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -12,15 +13,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.validation.Valid;
-
+@RequiredArgsConstructor
 @RestController
 @RequestMapping("/api/usuarios")
 public class UsuarioController {
     private final IUsuarioService usuarioService;
 
-    public UsuarioController(IUsuarioService usuarioService) {
-        this.usuarioService = usuarioService;
-    }
+    //public UsuarioController(IUsuarioService usuarioService) ;
+
 
     @PostMapping
     public ResponseEntity<?> registrarUsuario(@Valid @RequestBody UsuarioRequestDTO usuarioRequestDTO) {

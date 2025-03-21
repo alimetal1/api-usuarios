@@ -5,5 +5,5 @@ import com.alinsonMorales.java_work.application.models.dto.UsuarioRequestDTO;
 import com.alinsonMorales.java_work.application.models.dto.UsuarioResponseDTO;
 
 public interface IUsuarioService {
-    UsuarioResponseDTO registrarUsuario(UsuarioRequestDTO usuarioRequestDTO) throws ServiceException;
+    UsuarioResponseDTO registrarUsuario (UsuarioRequestDTO usuarioRequestDTO) throws ServiceException;
 }
